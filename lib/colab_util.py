@@ -16,6 +16,7 @@ from base64 import b64encode
 
 # Data structures and functions for rendering
 from pytorch3d.structures import Meshes
+from pytorch3d.renderer import Textures
 from pytorch3d.renderer import (
     look_at_view_transform,
     OpenGLOrthographicCameras, 
@@ -24,12 +25,10 @@ from pytorch3d.renderer import (
     Materials, 
     RasterizationSettings, 
     MeshRenderer, 
-    MeshRasterizer,  
+    MeshRasterizer,
     SoftPhongShader,
-    HardPhongShader,
-    TexturesVertex
+    HardPhongShader
 )
-
 def set_renderer():
     # Setup
     device = torch.device("cuda:0")
